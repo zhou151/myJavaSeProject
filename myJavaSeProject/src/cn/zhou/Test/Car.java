@@ -2,8 +2,9 @@ package cn.zhou.Test;
 
 public class Car
 {
-	String name;
-	String color;
+	public String name;
+	public String color;
+	public Integer price;
 	@Override
 	/**
 	 * 
@@ -23,5 +24,16 @@ public class Car
 			return true;
 		return false;
 	}
+	
+	
+	public Car(String name, String color, Integer price)
+	{
+		super();
+		this.name = name;
+		this.color = color;
+		this.price = price;
+	}
+	
+	
 	
 }
