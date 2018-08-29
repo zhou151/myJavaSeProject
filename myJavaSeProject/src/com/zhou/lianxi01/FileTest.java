@@ -1,4 +1,4 @@
-package com.zhou.test.t8_28;
+package com.zhou.lianxi01;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class FileTest
 	 * @return-type void
 	 * @author Mr_zhou
 	 * @date 2018年8月29日 下午1:23:31
-	 * TODO 遍历出控制台输入的目录下的所有子目录+文件
+	 * TODO 递归遍历出控制台输入的目录下的所有子目录+文件
 	 */
 	static int indexFile=0;
 	static int indexDirectory=0;
@@ -34,6 +34,7 @@ public class FileTest
 		System.out.println("文件夹总共--> "+indexDirectory+" 个");
 		System.out.println("文件总共--> "+indexFile+" 个");
 	}
+	/*递归方法*/
 	private static void each(File[] fileList)
 	{
 		if(fileList==null) {return;}
@@ -43,7 +44,7 @@ public class FileTest
 				System.out.println("文件---> "+file);indexFile++;
 			}
 			else if(file.isDirectory()) {
-				System.out.println("文件夹===> "+file);
+				System.out.println("---*-文件夹===> "+file);
 				each(file.listFiles());indexDirectory++;
 			}
 		}
