@@ -20,8 +20,7 @@ public class Listdemo
 {
 	public static void main(String[] args)
 	{
-		
-		myTest01();
+		myTest03();
 	}
 	
 	
@@ -54,9 +53,28 @@ public class Listdemo
 	}
 	
 	
-	
-	
-	
+	/**
+	 * 
+	 * @fun-name myTest03
+	 * @return-type void
+	 * @author Mr_zhou
+	 * @date 2018年8月29日 上午10:08:21
+	 * TODO  entrySet 方式遍历map
+	 */
+	public static void myTest03()
+	{
+		Map <String , Object> map=new HashMap<String , Object>();
+		
+		map.put("12", "你好5");
+		map.put("22", "你好2");
+		map.put("32", "你好3");
+		map.put("42", "你好4");
+		
+		for(Map.Entry<String, Object> entry : map.entrySet())
+		{
+			System.out.println(entry.getKey() + entry.getValue());
+		}
+	}
 	
 
 	/**
@@ -65,9 +83,9 @@ public class Listdemo
 	 * @return-type void
 	 * @author Mr_zhou
 	 * @date 2018年8月28日 上午11:59:41
-	 * TODO
+	 * TODO 集合中手动算法排序
 	 */
-	private static void myTest02()
+	public static void myTest02()
 	{
 		Set<Integer> setList=new HashSet<>();
 		setList.add(51325889);
