@@ -40,6 +40,9 @@ public class Listdemo
 		list.add(new Car("名字","颜色3",9));
 		list.add(new Car("名字","颜色4",2));
 		list.add(new Car("名字","颜色5",3));
+		
+		
+		
 		Map<String,Car> map=new HashMap<>();
 		for(Car c : list)
 			map.put(c.price.toString(),c);
