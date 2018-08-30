@@ -13,7 +13,7 @@ public class Job1
 	 */
 	public static void main(String[] args)
 	{
-		print(9);
+		print2(9);
 	}
 
 	private static void print(int args)
@@ -30,6 +30,18 @@ public class Job1
 			System.out.print(i+"*"+args+"="+(i)*args+" ");
 		}
 		System.out.println();
+	}
+	
+	private static void print2(int args)
+	{
+		System.out.println(args+"*"+args+"="+(args)*args+" ");
+		if(args>9)
+		{
+			return;
+		}else {
+			print2(args-1);
+		}
+		
 	}
 	
 }
