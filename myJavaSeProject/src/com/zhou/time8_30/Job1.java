@@ -32,5 +32,4 @@ public class Job1
 		System.out.println();
 	}
 	
-	
 }
