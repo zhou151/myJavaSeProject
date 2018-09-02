@@ -2,6 +2,7 @@ package com.zhou.interfaces.test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -34,7 +35,12 @@ public class Listdemo
 	 */
 	public  static void myTest01()
 	{
-		List<Car> list=new ArrayList <Car> ();
+		List<Car> list=null;
+		
+		
+		//线程安全的list
+		list=Collections.synchronizedList(new ArrayList <Car> ());
+		
 		list.add(new Car("名字","颜色",5));
 		list.add(new Car("名字","颜色2",6));
 		list.add(new Car("名字","颜色3",9));
