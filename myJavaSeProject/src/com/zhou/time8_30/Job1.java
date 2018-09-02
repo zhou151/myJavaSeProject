@@ -13,35 +13,48 @@ public class Job1
 	 */
 	public static void main(String[] args)
 	{
+		 print(9);
+		 System.out.println("---------------------------------------------------------------");
 		print2(9);
 	}
 
 	private static void print(int args)
 	{
-		if(args<=0)
+		if(args==0)
 		{
 			return;
 		}else {
 			print(args-1);
+			for (int i = 1; i <=args; i++)
+			{
+				System.out.print(i+"*"+args+"="+(i)*args+" ");
+			}
+			System.out.println();
 		}
-		
-		for (int i = 1; i <=args; i++)
-		{
-			System.out.print(i+"*"+args+"="+(i)*args+" ");
-		}
-		System.out.println();
 	}
 	
+	/**
+	 * 
+	 * @fun-name print2
+	 * @return-type void
+	 * @author Mr_zhou
+	 * @date 2018年8月30日 下午2:02:34
+	 * @param args
+	 * TODO 倒序递归99乘法表
+	 */
 	private static void print2(int args)
 	{
-		System.out.println(args+"*"+args+"="+(args)*args+" ");
-		if(args>9)
+		if(args==0)
 		{
 			return;
 		}else {
+			for (int i = 1; i <=args; i++)
+			{
+				System.out.print(i+"*"+args+"="+(i)*args+" ");
+			}
+			System.out.println();
+			
 			print2(args-1);
 		}
-		
 	}
-	
 }

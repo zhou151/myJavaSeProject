@@ -6,7 +6,9 @@ public class MyUtil
 {
 	public static void main(String[] args)
 	{
-
+		String  [] arr=new String [] {"周","杨","付"};
+		int random = getRandom(0,arr.length-1);
+		System.out.println("拿外卖的人--> "+arr[random]);
 	}
 	
 	/**
