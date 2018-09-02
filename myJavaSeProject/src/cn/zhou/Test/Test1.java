@@ -1,4 +1,4 @@
-package com.zhou.interfaces.test;
+package cn.zhou.Test;
 
 public class Test1
 {
