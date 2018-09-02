@@ -64,6 +64,7 @@ public class IoTest
 	 * 接口 Writer
 	 * 实现类 FileWriter
 	 */
+	
 	private static void fileOut()
 	{
 		try
