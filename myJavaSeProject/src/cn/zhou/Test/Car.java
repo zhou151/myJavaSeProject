@@ -5,6 +5,7 @@ public class Car
 	public String name;
 	public String color;
 	public Integer price;
+	
 	@Override
 	/**
 	 * 
