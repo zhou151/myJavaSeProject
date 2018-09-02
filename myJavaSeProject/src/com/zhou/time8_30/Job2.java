@@ -39,6 +39,7 @@ public class Job2
 			}
 		}
 		 * */
+		
 		System.out.println("选择排序,升序");
 		for (int i = 0; i < intArr.length; i++)
 		{
