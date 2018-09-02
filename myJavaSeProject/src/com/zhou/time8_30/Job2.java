@@ -24,6 +24,21 @@ public class Job2
 		int []intArr= new int[arrStr.length];
 		for (int i = 0; i < arrStr.length; i++)
 			intArr[i]=Integer.valueOf(arrStr[i]);
+		
+		
+		
+		/*
+		 * //冒泡排序
+		for(int j=0; j<arr.length; j++) {
+			for(int i=0; i<arr.length-1; i++) {
+				if(arr[i] > arr[i+1]){
+					int num = arr[i]; 
+					arr[i] = arr[i+1];
+					arr[i+1] = num;
+				}
+			}
+		}
+		 * */
 		System.out.println("选择排序,升序");
 		for (int i = 0; i < intArr.length; i++)
 		{
