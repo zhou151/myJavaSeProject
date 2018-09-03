@@ -1,6 +1,8 @@
 package com.zhou.lianxi01;
 
-public class Student
+import java.io.Serializable;
+
+public class Student implements Serializable
 {
 	private String name;  
 
