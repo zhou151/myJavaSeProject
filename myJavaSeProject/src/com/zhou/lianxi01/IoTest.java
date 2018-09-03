@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader;
 import java.io.Writer;
@@ -23,8 +24,8 @@ public class IoTest
 		//fileOut();
 		//fileInput();
 		//myOutPutstream();
-		//myInputstream();
-		myCopy();
+		myInputstream();
+		//myCopy();
 	}
 
 	
@@ -51,7 +52,7 @@ public class IoTest
 			File file01 = new File("E:/tx.jpg");
 			OutputStream fileOutputStream = new FileOutputStream(file01);
 			DataOutputStream dataOut=new DataOutputStream(fileOutputStream);
-			
+			//-----------------------------------------------------
 			byte [] byteArr=new byte[8];
 			for(int len=0;(len=daInput.read(byteArr))!=-1;)
 			{
@@ -89,18 +90,12 @@ public class IoTest
 		{
 			//-----------------------------------------------------
 			File file = new File("D:/a.txt");
-			InputStream fileInputStream = new FileInputStream(file);
-			DataInputStream daInput=new DataInputStream(fileInputStream);
-			//读小文件建议写法
-			/*byte [] byteArr=new byte[(int)file.length()];
-			fileInputStream.read(byteArr);*/
-			
-			//方式二,边读边输出,每次读8个字符,性能更高,建议写法
-			byte [] byteArr=new byte[8];
-			int len=0;
-			for(;(len=daInput.read(byteArr))!=-1;)
+			InputStream daInput = new FileInputStream(file);
+			InputStreamReader inputStreamReader = new InputStreamReader (daInput,"gbk");
+			char [] byteArr=new char[8];
+			for(int len=0;(len=inputStreamReader.read(byteArr))!=-1;)
 			{
-				System.out.println(new String(byteArr,0,len));
+				System.out.print(new String(byteArr,0,len));
 			}
 			daInput.close();
 			//-----------------------------------------------------
@@ -119,7 +114,7 @@ public class IoTest
 	 * @return-type void
 	 * @author Mr_zhou
 	 * @date 2018年9月2日 下午12:07:16
-	 * TODO  字节输出流输出文本demo
+	 * TODO  字节输出流输出(文本)
 	 * 接口 OutputStream
 	 * 实现类  FileOutputStream
 	 */
@@ -128,12 +123,11 @@ public class IoTest
 		try
 		{
 			//-----------------------------------------------------
-			OutputStream fileOutputStream = new FileOutputStream(new File(""),true);
-			DataOutputStream dataOut=new DataOutputStream(fileOutputStream);
-			
+			OutputStream dataOut = new FileOutputStream(new File("D:/a.txt"),true);
 			String str="sddssd";
-			
-			dataOut.write(str.getBytes());
+			dataOut.write(str.getBytes("UTF-8"));
+			dataOut.flush();
+			dataOut.close();
 			//-----------------------------------------------------
 		} catch (FileNotFoundException e)
 		{
@@ -150,7 +144,7 @@ public class IoTest
 	 * @return-type void
 	 * @author Mr_zhou
 	 * @date 2018年9月2日 上午11:12:31
-	 * TODO 文本输入流 
+	 * TODO 文本输入流 (读文件)
 	 * 接口  Reader
 	 * 实现类 FileReader
 	 */
