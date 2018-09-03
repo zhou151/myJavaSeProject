@@ -1,5 +1,8 @@
 package com.zhou.lianxi01;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -40,6 +43,8 @@ public class IoTest
 			//-----------------------------------------------------
 			File file = new File("D:/tx.jpg");
 			InputStream fileInputStream = new FileInputStream(file);
+			
+			
 			
 			//这里的file01如果不存在会自动创建
 			File file01 = new File("E:/tx.jpg");
@@ -122,6 +127,7 @@ public class IoTest
 			//-----------------------------------------------------
 			OutputStream fileOutputStream = new FileOutputStream(new File(""),true);
 			
+			
 			String str="sddssd";
 			
 			fileOutputStream.write(str.getBytes());
@@ -152,15 +158,19 @@ public class IoTest
 			//-----------------------------------------------------
 			File file = new File("D:/a.txt");
 			Reader fileReader = new FileReader(file);
+			BufferedReader br=new BufferedReader(fileReader);
+			
 			//文本字符长度
 			System.out.println("文本字符长度 :"+file.length());
 			//创建char数组,大小为文本的字符长度
 			char [] charArr=new char[(int)file.length()];
 			
-			fileReader.read(charArr);
+			br.read(charArr);
 			String string = new String(charArr);
 			
 			System.out.println(string);
+			
+			br.close();
 			//-----------------------------------------------------
 			
 		} catch (FileNotFoundException e)
@@ -192,12 +202,14 @@ public class IoTest
 			File file = new File("D:/a.txt");
 			//注意参数2为true为追加内容
 			Writer fileWriter = new FileWriter(file,true);
+			BufferedWriter bw=new BufferedWriter(fileWriter);
+			
 			//追加文本内容
-			fileWriter.write("aaaaaaaaaaaaaaaaa");
+			bw.write("aaaaaaaaaaaaaaaaa");
 			//注意要刷新缓冲区
-			fileWriter.flush();
+			bw.flush();
 			//一定要关闭
-			fileWriter.close();
+			bw.close();
 			//-----------------------------------------------------
 		} catch (IOException e)
 		{
