@@ -3,6 +3,7 @@ package com.zhou.lianxi01;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -43,22 +44,23 @@ public class IoTest
 			//-----------------------------------------------------
 			File file = new File("D:/tx.jpg");
 			InputStream fileInputStream = new FileInputStream(file);
-			
+			DataInputStream daInput=new DataInputStream(fileInputStream);
 			
 			
 			//这里的file01如果不存在会自动创建
 			File file01 = new File("E:/tx.jpg");
 			OutputStream fileOutputStream = new FileOutputStream(file01);
+			DataOutputStream dataOut=new DataOutputStream(fileOutputStream);
 			
 			byte [] byteArr=new byte[8];
-			for(int len=0;(len=fileInputStream.read(byteArr))!=-1;)
+			for(int len=0;(len=daInput.read(byteArr))!=-1;)
 			{
-				fileOutputStream.write(byteArr, 0, len);
-				fileOutputStream.flush();
+				dataOut.write(byteArr, 0, len);
+				dataOut.flush();
 			}
 			//注意关闭流,先开后关
-			fileOutputStream.close();
-			fileInputStream.close();
+			dataOut.close();
+			daInput.close();
 			System.out.println("完成");
 			//-----------------------------------------------------
 		} catch (FileNotFoundException e)
@@ -88,6 +90,7 @@ public class IoTest
 			//-----------------------------------------------------
 			File file = new File("D:/a.txt");
 			InputStream fileInputStream = new FileInputStream(file);
+			DataInputStream daInput=new DataInputStream(fileInputStream);
 			//读小文件建议写法
 			/*byte [] byteArr=new byte[(int)file.length()];
 			fileInputStream.read(byteArr);*/
@@ -95,11 +98,11 @@ public class IoTest
 			//方式二,边读边输出,每次读8个字符,性能更高,建议写法
 			byte [] byteArr=new byte[8];
 			int len=0;
-			for(;(len=fileInputStream.read(byteArr))!=-1;)
+			for(;(len=daInput.read(byteArr))!=-1;)
 			{
 				System.out.println(new String(byteArr,0,len));
 			}
-			fileInputStream.close();
+			daInput.close();
 			//-----------------------------------------------------
 		} catch (FileNotFoundException e)
 		{
@@ -126,11 +129,11 @@ public class IoTest
 		{
 			//-----------------------------------------------------
 			OutputStream fileOutputStream = new FileOutputStream(new File(""),true);
-			
+			DataOutputStream dataOut=new DataOutputStream(fileOutputStream);
 			
 			String str="sddssd";
 			
-			fileOutputStream.write(str.getBytes());
+			dataOut.write(str.getBytes());
 			//-----------------------------------------------------
 		} catch (FileNotFoundException e)
 		{
