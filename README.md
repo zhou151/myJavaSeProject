@@ -9,4 +9,5 @@
 [java_Thread多线程](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/com/zhou/lianxi01/TestThread.java)
 
 > [计时器Timer的使用](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/com/zhou/lianxi01/TimerTest.java) -|-
-[日期和日期格式化](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/com/zhou/lianxi01/MyDateTest.java)
+[日期和日期格式化](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/com/zhou/lianxi01/MyDateTest.java) -|-
+[java发送qq邮件demo](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/cn/zhou/Test/SendEmail.java)
