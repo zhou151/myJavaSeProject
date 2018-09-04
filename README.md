@@ -10,4 +10,5 @@
 
 > [计时器Timer的使用](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/com/zhou/lianxi01/TimerTest.java) -|-
 [Date日期和日期格式化](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/com/zhou/lianxi01/MyDateTest.java) -|-
-[java发送qq邮件demo](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/cn/zhou/Test/SendEmail.java)
+[java发送qq邮件demo](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/cn/zhou/Test/SendEmail.java)-|-
+[File类常用操作](https://github.com/zhou151/myJavaSeProject/blob/master/myJavaSeProject/src/com/zhou/lianxi01/FileTest.java)
