@@ -69,6 +69,7 @@ public class MyDateTest
 		 */
 		Date e = new Date();
 		
+
 		//多个占位符引用指定参数,引用第一个%1$tT ，引用第二个%2$tT
 		System.out.println(String.format("%tF %1$tT", e));
 		
