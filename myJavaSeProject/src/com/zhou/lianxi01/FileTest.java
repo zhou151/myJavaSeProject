@@ -38,7 +38,7 @@ public class FileTest
 		file01.createNewFile();
 		
 		//renameTo()移动,复制,重命名
-		File file02 = new File("D:/a.png");
+		File file02 = new File("D:/b.png");
 		file01.renameTo(file02);
 		
 		//删除文件
