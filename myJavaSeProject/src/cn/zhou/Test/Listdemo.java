@@ -18,7 +18,7 @@ public class Listdemo
 {
 	public static void main(String[] args)
 	{
-		//myTest03();
+		// myTest03();
 		myTest04();
 	}
 
@@ -27,9 +27,8 @@ public class Listdemo
 	 * @fun-name myTest01
 	 * @return-type void
 	 * @author Mr_zhou
-	 * @date 2018年8月28日 下午6:00:06 
-	 * TODO 集合中对象排序
-	 *  */
+	 * @date 2018年8月28日 下午6:00:06 TODO 集合中对象排序
+	 */
 	private static void myTest04()
 	{
 		List<Car> list = null;
@@ -44,20 +43,25 @@ public class Listdemo
 		{
 			System.out.println(car);
 		}
-		Collections.sort(list, new Comparator<Car>() {
-            public int compare(Car arg0, Car arg1) {
-                int hits0 = arg0.getPrice();
-                int hits1 = arg1.getPrice();
-                //这里的hits1 < hits0 改成hits1 > hits0 就是倒序
-                if (hits1 < hits0) {
-                    return 1;
-                } else if (hits1 == hits0) {
-                    return 0;
-                } else {
-                    return -1;
-                }
-            }
-        });
+		Collections.sort(list, new Comparator<Car>()
+		{
+			public int compare(Car arg0, Car arg1)
+			{
+				int hits0 = arg0.getPrice();
+				int hits1 = arg1.getPrice();
+				// 这里的hits1 < hits0 改成 hits1 > hits0 就是倒序
+				if (hits1 < hits0)
+				{
+					return 1;
+				} else if (hits1 == hits0)
+				{
+					return 0;
+				} else
+				{
+					return -1;
+				}
+			}
+		});
 		System.out.println("-----------------------排序后---------------------------");
 		for (Car car : list)
 		{
@@ -70,9 +74,8 @@ public class Listdemo
 	 * @fun-name myTest01
 	 * @return-type void
 	 * @author Mr_zhou
-	 * @date 2018年8月28日 下午6:00:06 
-	 * TODO 集合中对象排序
-	 *  */
+	 * @date 2018年8月28日 下午6:00:06 TODO 集合中对象排序
+	 */
 	public static void myTest01()
 	{
 		List<Car> list = null;
@@ -88,7 +91,7 @@ public class Listdemo
 
 		Map<String, Car> map = new HashMap<>();
 		for (Car c : list)
-			map.put(c.getPrice()+"" , c);
+			map.put(c.getPrice() + "", c);
 		Object[] array = map.keySet().toArray();
 		Integer[] arr01 = new Integer[array.length];
 		for (int i = 0; i < array.length; i++)
@@ -96,7 +99,8 @@ public class Listdemo
 		Arrays.sort(arr01);
 		for (int i : arr01)
 			System.out.println("--" + map.get(i + "").getColor() + "--"
-					+ map.get(i + "").getName() + "--" + map.get(i + "").getPrice());
+					+ map.get(i + "").getName() + "--"
+					+ map.get(i + "").getPrice());
 	}
 
 	/**
