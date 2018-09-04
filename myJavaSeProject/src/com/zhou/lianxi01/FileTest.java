@@ -12,6 +12,41 @@ public class FileTest
 	}
 	
 	
+	private static void testFile01() throws IOException
+	{
+		//文件夹
+		File file = new File("D:/abc");
+		//是不是一个文件
+		file.isFile();
+		//是否存在
+		file.exists();
+		
+		//在D:/abc下创建一个文件夹myfile
+		File file2 = new File(file,"myfile");
+		file2.mkdirs();
+		
+		//删除文件夹
+		file2.delete();
+		
+		//文件
+		File file01 = new File("D:/a.png");
+		//是不是一个文件夹
+		file01.isDirectory();
+		//是不是一个文件
+		file01.isFile();
+		//创建这个文件
+		file01.createNewFile();
+		
+		//renameTo()移动,复制,重命名
+		File file02 = new File("D:/a.png");
+		file01.renameTo(file02);
+		
+		//删除文件
+		file01.delete();
+		
+	}
+
+
 	/**
 	 * @fun-name testFile02
 	 * @return-type void
