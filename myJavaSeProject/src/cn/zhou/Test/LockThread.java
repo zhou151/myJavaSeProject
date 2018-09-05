@@ -10,7 +10,7 @@ package cn.zhou.Test;
 public class LockThread implements Runnable
 {
 
-	private volatile int num = 100;
+	private int num = 100;
 	@Override
 	public void run()
 	{
