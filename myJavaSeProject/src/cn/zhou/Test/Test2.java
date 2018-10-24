@@ -20,7 +20,7 @@ public class Test2
 	 */
 	public static void main(String[] args)
 	{
-		for (int i = 1; i <= 5; i++)
+		/*for (int i = 1; i <= 5; i++)
 		{
 			for (int j = 5; i <= j; j--)
 				System.out.print(" ");
@@ -30,7 +30,15 @@ public class Test2
 				System.out.print("*");
 			System.out.println();
 		}
-		int []arr1= {1,2};
+		int []arr1= {1,2};*/
+		test();
+	}
+
+	private static void test()
+	{
+		for (int i = 0; i < 10; i++) {
+		    System.out.println((Integer) i);
+		}
 	}
 
 }

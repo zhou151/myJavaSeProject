@@ -5,5 +5,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="lib" path="lib/activation.jar"/>
 	<classpathentry kind="lib" path="lib/mail.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.47.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar" sourcepath="D:/apache-maven-3.5.4/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

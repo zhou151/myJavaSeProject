@@ -28,7 +28,7 @@ public class SendEmail
 	
     public static void main(String [] args) throws GeneralSecurityException 
     {
-    	sondMail("1045907858@qq.com","------标题-----","主体信息");
+    	sondMail("2869317752@qq.com","------标题-----","主体信息");
     }
     
 
