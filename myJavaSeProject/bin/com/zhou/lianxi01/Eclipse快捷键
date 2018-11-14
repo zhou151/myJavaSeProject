@@ -1,0 +1,36 @@
+						Eclipse快捷键
+				2 键组合
+Ctrl + 1 快速修正
+ALT+/ 自动补全代码或者提示代码
+Ctrl + / 单行注释
+Ctrl +O 快速预览视图 查看当前类
+Ctrl +E：快速切换编辑文件
+Ctrl +D：删除当前行
+Ctrl +W关闭当前编辑的窗口
+Ctrl +F 打开查找替换窗口
+Ctrl + M：当前编辑页面窗口最大化
+Ctrl +T  打开继承关系图
+CTRL+PGUP/PNDN 切换左边/右边的窗口
+SHIFT+ENTER 在当前行下边创建空白行
+ALT+方向键上下;移动行(上或下)(显卡驱动冲突)
+
+
+
+					3 键组合
+CTRL+ALT+方向上下键 向上下复制行	
+CTRL+SHIFT+F 格式化代码(和搜狗输入法冲突)
+CTRL+SHIFT+/ 多行注释
+SHIFT+ALT+R 重命名
+CTRL+SHIFT+O 导包
+CTRL+SHIFT+S保存所有 
+ALT+SHIFT+S 常用菜单
+CTRL+SHIFT+UP/DOWN下一个（属性或方法）
+
+
+
+				4键组合
+CTRL+SHIFT+S+V 打开重写菜单
+CTRL+SHIFT+S+O 使用字段生成构造器
+CTRL+SHIFT+S+R 生成GET和SET方法
+
+
